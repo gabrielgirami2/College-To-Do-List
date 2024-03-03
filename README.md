@@ -306,6 +306,16 @@ Atualiza os detalhes da tarefa com o ID especificado, associada a uma matéria d
 | prazo 	 | LocalDate |     ✅       | Prazo da tarefa     |
 | materiaId 	 | Long |     ✅       | ID da matéria     |
 
+#### Exemplo de Corpo da Requisição
+
+```json
+{
+    "descricao": "Trabalho de Matemática",
+    "prazo": "2024-03-15",
+    "materiaId": 2
+}
+```
+
 #### Códigos de Resposta
 
 | Código | Descrição                |
