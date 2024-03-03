@@ -157,11 +157,15 @@ Atualiza os dados da matéria com o ID especificado no parâmetro de caminho.
     "professor": "João Silva"
 }
 ```
+#### Código de Resposta
+
 | código | descrição |
 |--------|-----------|
 |200| Sucesso: Matéria atualizada com sucesso
 |400| Falha na validação. Por favor, verifique os dados enviados no corpo da requisição
 |401| Não autorizado. Por favor, faça a autenticação em /login
 |404| Matéria com o ID especificado não existe 
+
+---
 
 
