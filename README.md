@@ -34,7 +34,7 @@ Retorna um array com todas as matérias adicionadas pelo usuário atual.
 
 #### Exemplo de Resposta
 
-```js
+```json
 [
     {
         "id": 1,
@@ -66,14 +66,14 @@ Adiciona uma matéria com os dados enviados no corpo da requisição.
 | nome      | string |     ✅      | Um nome curto para a matéria |
 | professor | string |     ❌      | Nome do professor     |
 
-```js
+```json
 {
     "nome": "Matemática",
     "professor": "João Silva"
 }
 ```
 #### Exemplo de Resposta
-```js
+```json
 {
     "id": 1,
     "nome": "Matemática",
@@ -113,7 +113,7 @@ Retorna os dados da matéria com o ID especificado no parâmetro de caminho.
 
 #### Exemplo de Resposta
 
-```js
+```json
 {
     "id": 1,
     "nome": "Matemática",
@@ -143,14 +143,14 @@ Atualiza os dados da matéria com o ID especificado no parâmetro de caminho.
 | nome      | string |     ✅      | Um nome curto para a matéria |
 | professor | string |     ❌      | Nome do professor     |
 
-```js
+```json
 {
     "nome": "Matemática",
     "professor": "João Silva"
 }
 ```
 #### Exemplo de Resposta
-```js
+```json
 {
     "id": 1,
     "nome": "Matemática",
@@ -176,7 +176,7 @@ Retorna um array com todas as tarefas associadas às matérias do usuário atual
 
 #### Exemplo de Resposta
 
-```js
+```json
 {
     "id": 1,
     "descricao": "Trabalho de Matemática",
