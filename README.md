@@ -238,12 +238,6 @@ Adiciona uma nova tarefa associada a uma matéria do usuário atual.
 
 Apaga a tarefa com o ID especificado, associada a uma matéria do usuário atual.
 
-#### Parâmetros da Requisição
-
-| Parâmetro | Descrição               |
-| --------- | ----------------------- |
-| id        | ID da tarefa a ser apagada |
-
 #### Códigos de Resposta
 
 | Código | Descrição                |
