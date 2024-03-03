@@ -42,4 +42,11 @@ Retorna um array com todas as matérias adicionadas pelo usuário atual.
         "professor": "João Silva"
     }
 ]
+```
 
+#### Códigos de Resposta
+
+| código | descrição |
+|--------|-----------|
+|200| Sucesso: Matérias retornadas com sucesso
+|401| 	Não autorizado. Por favor, faça a autenticação em /login
