@@ -306,13 +306,12 @@ Atualiza os detalhes da tarefa com o ID especificado, associada a uma matéria d
 
 #### Exemplo de Corpo da Requisição
 
-```json
+
 | Campo     | Tipo   | Obrigatório | Descrição             |
 |-----------|--------|-------------|-----------------------|
 | descricao      | string |     ✅      | Uma descricao breve da tarefa |
 | prazo 	 | LocalDate |     ✅       | Prazo da tarefa     |
 | materiaId 	 | Long |     ✅       | ID da matéria     |
-```
 
 #### Códigos de Resposta
 
