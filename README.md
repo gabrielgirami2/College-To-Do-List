@@ -179,17 +179,13 @@ Retorna um array com todas as tarefas associadas às matérias do usuário atual
 
 #### Exemplo de Resposta
 
-```json
+```js
 [
     {
         "id": 1,
-        "descricao": "Trabalho de Matemática",
-        "prazo": "2024-03-10",
-        "materia": {
-            "id": 1,
-            "nome": "Matemática",
-            "professor": "João Silva"
-        }
+        "id_materia": 1,
+        "descricao": "Completar exercícios 1-10",
+        "prazo": "2024-03-10"
     }
 ]
 ```
