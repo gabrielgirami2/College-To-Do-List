@@ -168,9 +168,6 @@ Atualiza os dados da matéria com o ID especificado no parâmetro de caminho.
 
 ---
 
----
-
-
 ### Listar Tarefas
 
 `GET` /tarefas
@@ -180,14 +177,16 @@ Retorna um array com todas as tarefas associadas às matérias do usuário atual
 #### Exemplo de Resposta
 
 ```js
-[
-    {
+{
+    "id": 1,
+    "descricao": "Trabalho de Matemática",
+    "prazo": "2024-03-10",
+    "materia": {
         "id": 1,
-        "id_materia": 1,
-        "descricao": "Completar exercícios 1-10",
-        "prazo": "2024-03-10"
+        "nome": "Matemática",
+        "professor": "João Silva"
     }
-]
+}
 ```
 
 #### Códigos de Resposta
