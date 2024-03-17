@@ -1,6 +1,7 @@
 package com.fiap.model;
 
 import java.util.List;
+import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -27,7 +28,7 @@ public class MateriaService {
         materiaRepository.deleteById(id);
     }
  
-    public Materia detalharMateria(Long id) {
+    public Optional<Materia> detalharMateria(Long id) {
         return materiaRepository.findById(id).orElse(null);
     }
  
