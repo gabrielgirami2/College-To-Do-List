@@ -4,6 +4,8 @@ import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+import jakarta.validation.constraints.NotBlank;
+import jakarta.validation.constraints.Size;
 
  
 @Entity
@@ -11,10 +13,13 @@ public class Materia {
 
     @Id @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
+
+    @NotBlank(message = "O nome da matéria é obrigatório")
+    @Size(min = 2, message = "O nome da matéria deve ter pelo menos 2 caracteres")
     private String nome;
-    private String professor;
- 
     
+    @NotBlank(message = "O nome do professor é obrigatório")
+    private String professor;
  
     public Long getId() {
         return id;
@@ -41,7 +46,6 @@ public class Materia {
     }
 
     public Object map(Object object) {
-        // TODO Auto-generated method stub
         throw new UnsupportedOperationException("Unimplemented method 'map'");
     }
 }

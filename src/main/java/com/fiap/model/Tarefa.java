@@ -4,13 +4,21 @@ package com.fiap.model;
 import jakarta.persistence.*;
 import java.time.LocalDate;
 
+import jakarta.validation.constraints.NotBlank;
+import jakarta.validation.constraints.NotNull;
+
+
 
 @Entity
 public class Tarefa {
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    
+    @Id @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
+
+    @NotBlank(message = "A descrição da tarefa é obrigatória")
     private String descricao;
+    
+    @NotNull(message = "O prazo da tarefa é obrigatório")
     private LocalDate prazo;
  
     @ManyToOne
