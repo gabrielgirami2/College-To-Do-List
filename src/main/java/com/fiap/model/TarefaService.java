@@ -6,6 +6,7 @@ import org.springframework.stereotype.Service;
 import com.fiap.repository.TarefaRepository;
 
 import java.util.List;
+import java.util.Optional;
  
 @Service
 public class TarefaService {
@@ -25,7 +26,7 @@ public class TarefaService {
         tarefaRepository.deleteById(id);
     }
  
-    public Tarefa detalharTarefa(Long id) {
+    public Optional<Tarefa> detalharTarefa(Long id) {
         return tarefaRepository.findById(id).orElse(null);
     }
  
