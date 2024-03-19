@@ -39,5 +39,10 @@ public class Materia {
     public void setProfessor(String professor) {
         this.professor = professor;
     }
+
+    public Object map(Object object) {
+        // TODO Auto-generated method stub
+        throw new UnsupportedOperationException("Unimplemented method 'map'");
+    }
 }
 

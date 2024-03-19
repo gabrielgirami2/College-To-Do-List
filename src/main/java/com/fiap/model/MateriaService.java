@@ -29,7 +29,7 @@ public class MateriaService {
     }
  
     public Optional<Materia> detalharMateria(Long id) {
-        return materiaRepository.findById(id).orElse(null);
+        return materiaRepository.findById(id);
     }
  
     public Materia atualizarMateria(Long id, Materia materia) {
@@ -41,3 +41,4 @@ public class MateriaService {
         }
     }
 }
+

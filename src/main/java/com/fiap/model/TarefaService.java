@@ -27,7 +27,7 @@ public class TarefaService {
     }
  
     public Optional<Tarefa> detalharTarefa(Long id) {
-        return tarefaRepository.findById(id).orElse(null);
+        return tarefaRepository.findById(id);
     }
  
     public Tarefa atualizarTarefa(Long id, Tarefa tarefa) {
@@ -39,3 +39,4 @@ public class TarefaService {
         }
     }
 }
+
