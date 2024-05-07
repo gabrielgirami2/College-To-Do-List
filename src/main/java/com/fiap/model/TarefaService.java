@@ -1,6 +1,8 @@
 package com.fiap.model;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.PageRequest;
 import org.springframework.stereotype.Service;
 
 import com.fiap.repository.TarefaRepository;
@@ -37,6 +39,10 @@ public class TarefaService {
         } else {
             return null;
         }
+    }
+
+    public Page<Tarefa> listarTarefasPaginadas(PageRequest pageRequest) {
+        return tarefaRepository.findAll(pageRequest);
     }
 }
 

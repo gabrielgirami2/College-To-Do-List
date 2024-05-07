@@ -1,8 +1,8 @@
 package com.fiap.controller;
 
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
+import org.hibernate.query.Page;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.PageRequest;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.DeleteMapping;
@@ -12,7 +12,6 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.ResponseStatus;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.bind.annotation.*;
 
@@ -20,24 +19,20 @@ import com.fiap.model.Materia;
 import com.fiap.model.MateriaService;
 
 import java.util.Optional;
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
- 
+
 @RestController
 @RequestMapping("/materias")
 public class MateriaController {
-
-    private static final Logger log = LoggerFactory.getLogger(MateriaController.class);
 
     @Autowired
     private MateriaService materiaService;
 
     @GetMapping
-    public ResponseEntity<List<Materia>> listarMaterias() {
-        List<Materia> materias = materiaService.listarMaterias();
-        return ResponseEntity.ok(materias);
+    public ResponseEntity<Class<? extends Page>> listarMaterias(
+            @RequestParam(defaultValue = "0") Integer pagina,
+            @RequestParam(defaultValue = "10") Integer tamanho) {
+        Page materias = materiaService.listarMateriasPaginadas(PageRequest.of(pagina, tamanho));
+        return ResponseEntity.ok(materias.getClass());
     }
 
     @PostMapping
